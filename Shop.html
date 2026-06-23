@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EmmyBest-Shop</title>
+    <link rel="stylesheet" href="src/css/output.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <style>
+    .sel {
+      color: #4a4a4a;
+      transition: all 70ms ease-in-out;
+      cursor: pointer;
+    }
+    .sel:active {
+      color: #e8181b;
+    }
+    .pass {
+      color: whitesmoke;
+    }
+  </style>
+  <body class="bg-[#F4F4F4]">
+    <!-- //sidebar -->
+    <section
+      class="h-full w-56 bg-[#000000cf] absolute z-50 flex flex-col justify-evenly items-center px-5 -translate-x-56 transition duration-300 blur-none"
+      id="slide"
+    >
+      <div class="w-full items-center flex justify-between py-5 flex-row">
+        <i class="sel fa-solid fa-xmark text-4xl cursor-pointer" id="ex"></i>
+        <h2
+          class="text-2xl font-sans font-semibold text-[#E8181B] cursor-pointer"
+        >
+          Emmy <span class="text-[#F4F4F4]">Best</span>
+        </h2>
+      </div>
+
+      <div class="w-full h-48 flex flex-col justify-around">
+        <a
+          href="index.html"
+          class="sel text-xl text-[#F4F4F4] font-sans cursor-pointer flex items-center gap-2"
+        >
+          <i class="fa-solid fa-home w-8"></i>Home
+        </a>
+        <a
+          href="Shop.html"
+          class="sel text-xl font-sans cursor-pointer flex items-center gap-2"
+        >
+          <i class="fa-solid fa-shop w-8"></i>Shop
+        </a>
+        <a
+          href="Cart.html"
+          class="sel text-xl font-sans cursor-pointer flex items-center gap-2"
+        >
+          <i class="fa-solid fa-cart-shopping w-8"></i>Cart
+        </a>
+        <a
+          href="Delivery.html"
+          class="sel text-xl font-sans cursor-pointer flex items-center gap-2"
+        >
+          <i class="fa-solid fa-circle-info w-8"></i>Deliver info
+        </a>
+        <a
+          href="Contact.html"
+          class="sel text-xl font-sans cursor-pointer flex items-center gap-2"
+        >
+          <i class="fa-solid fa-phone w-8"></i>Contact
+        </a>
+      </div>
+
+      <div class="bg-gray-500 w-full h-[0.5px]"></div>
+
+               <div class="w-full h-32 flex flex-col justify-around">
+                <h3 class="sel
+                text-xl  font-sans cursor-pointer ">Categories</h3>
+                <a href="Shop.html?category=men"><h3 class="sel
+                text-xl  font-sans cursor-pointer ">Men's</h3></a>
+                <a href="Shop.html?category=women">
+                <h3 class="sel
+                text-xl  font-sans cursor-pointer ">Women's</h3></a>
+                <a href="Shop.html?category=unisex">
+                <h3 class="sel
+                text-xl  font-sans cursor-pointer ">Unisex</h3></a>
+            </div>
+
+
+      <div class="bg-gray-500 w-full h-[0.5px]"></div>
+
+      <div class="w-full h-32 flex flex-col justify-around">
+        <h3 class="sel text-xl font-sans cursor-pointer">About Us</h3>
+        <a href="Delivery.html">
+        <h3 class="sel text-xl font-sans cursor-pointer">FAQs</h3>
+        </a>
+        <h3 class="sel text-xl font-sans cursor-pointer">Terms & Conditions</h3>
+        <h3 class="sel text-xl font-sans cursor-pointer">Privacy Policy</h3>
+      </div>
+    </section>
+
+    <div id="body" class="px-4">
+      <header class="relative h-20 z-20">
+        <!-- //nav bar -->
+        <nav
+          class="fixed bg-[#F4F4F4] w-full items-center flex justify-between py-5 flex-row left-0 px-4"
+        >
+          <i
+            class="sel fas fa-bars text-3xl text-[#0D1B3E] cursor-pointer"
+            id="threedot"
+          ></i>
+          <h2 class="text-2xl font-sans font-semibold text-[#0D1B3E]">Shop</h2>
+          <div>
+            <div
+              class="absolute top-[6px] right-2 w-5 h-5 text-center rounded-full bg-[#E8181B] flex justify-center items-center text-[#F4F4F4]"
+            >
+              <h1 id="CartDisplay">0</h1>
+            </div>
+            <a href="Cart.html"
+              ><i class="sel fa-solid fa-cart-shopping text-2xl"></i
+            ></a>
+          </div>
+        </nav>
+      </header>
+
+      <section class="flex flex-col gap-2">
+        <form class="flex flex-row gap-1">
+          <i
+            class="fas fa-search absolute left-8 top-[90px] text-xl text-[#4a4a4a]"
+          ></i>
+          <input
+            class="border border-gray-300 rounded-full p-2 pl-10 w-full"
+            type="search"
+            id="site-search"
+            placeholder="Search..."
+          />
+          <button
+            class="bg-[#E8181B] text-white rounded-full p-2 px-5 cursor-pointer active:bg-white active:text-[#E8181B] transition duration-300"
+            type="button"
+            id="SearchBtn"
+          >
+            Search
+          </button>
+        </form>
+        <article class="flex flex-row w-full py-2 justify-between gap-2">
+          <button
+            class="bg-gray-300 p-3 rounded-2xl flex items-center justify-center z-10"
+            id="Filter"
+          >
+            <i class="fas fa-filter text-xl pointer-events-none"></i>
+          </button>
+
+          <section
+            class="flex flex-row justify-between w-0 duration-300 overflow-hidden gap-2"
+            id="FilterSection"
+          >
+            <button
+              class="FilterBtn border-gray-300 border cursor-pointer bg-[#E8181B] px-3 rounded-2xl flex items-center justify-center w-full"
+              id="All"
+              data-target="all"
+            >
+              <h3>All</h3>
+            </button>
+            <button
+              class="FilterBtn border-gray-300 border cursor-pointer px-3 rounded-2xl flex items-center justify-center w-full"
+              id="Men"
+              data-target="men"
+            >
+              <h3>Men's</h3>
+            </button>
+            <button
+              class="FilterBtn border-gray-300 border cursor-pointer px-3 rounded-2xl flex items-center justify-center w-full"
+              id="Women"
+              data-target="women"
+            >
+              <h3>Women's</h3>
+            </button>
+            <button
+              class="FilterBtn border-gray-300 border cursor-pointer px-3 rounded-2xl flex items-center justify-center w-full"
+              id="Unisex"
+              data-target="unisex"
+            >
+              <h3>Unisex</h3>
+            </button>
+          </section>
+        </article>
+      </section>
+
+      <main class="">
+        <div
+          class="relative text-red-800 justify-center text-center text-3xl z-40 font-semibold font-serif hidden"
+          id="unavailable"
+        >
+          <h1>We don't currently have the fragrance you are looking for.</h1>
+        </div>
+
+        <section class="w-full flex flex-col justify-between gap-2">
+          <h1
+            class="productname font-semibold font-sans text-2xl text-[#000000cf]"
+          >
+            Unavailable
+          </h1>
+
+          <section
+            class="w-full flex flex-row justify-between gap-3 cursor-pointer"
+          >
+            <!-- //Card 1 -->
+            <article
+              class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-center items-center overflow-hidden relative"
+              data-gender="men"
+            >
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <div
+                class="DropDown absolute z-30 top-6 px-2 h-0 overflow-hidden transition-all duration-300"
+              >
+                <div
+                  class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2"
+                >
+                  <h3>
+                    Details are unavailable at the moment with time it will be
+                    available
+                  </h3>
+                </div>
+              </div>
+              <div class="">
+                <img src="src/media/image/men.png" alt="" />
+              </div>
+              <h1>Unavailable Product</h1>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3
+                  class="ProductPrice text-[#E8181B] font-semibold text-xl"
+                  data-price="15000"
+                >
+                  ₦15,000
+                </h3>
+                <button
+                  class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2"
+                >
+                  <i
+                    class="fas fa-plus text-2xl text-[#191919] cursor-pointer"
+                  ></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- //Card 2 -->
+            <article
+              class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-center items-center overflow-hidden relative"
+              data-gender="women"
+            >
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <div
+                class="DropDown absolute z-30 top-6 px-2 h-0 overflow-hidden transition-all duration-300"
+              >
+                <div
+                  class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2"
+                >
+                  <h3>
+                    Details are unavailable at the moment with time it will be
+                    available
+                  </h3>
+                </div>
+              </div>
+              <div class="">
+                <img src="src/media/image/men.png" alt="" />
+              </div>
+              <h1>Unavailable</h1>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3
+                  class="ProductPrice text-[#E8181B] font-semibold text-xl"
+                  data-price="15000"
+                >
+                  ₦15,000
+                </h3>
+                <button
+                  class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2"
+                >
+                  <i
+                    class="fas fa-plus text-2xl text-[#191919] cursor-pointer"
+                  ></i>
+                </button>
+              </div>
+            </article>
+          </section>
+
+          <section
+            class="w-full flex flex-row justify-between gap-3 cursor-pointer"
+          >
+            <!-- //Card 3 -->
+            <article
+              class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-center items-center overflow-hidden relative"
+              data-gender="unisex"
+            >
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <div
+                class="DropDown absolute z-30 top-6 px-2 h-0 overflow-hidden transition-all duration-300"
+              >
+                <div
+                  class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2"
+                >
+                  <h3>
+                    Details are unavailable at the moment with time it will be
+                    available
+                  </h3>
+                </div>
+              </div>
+              <div class="">
+                <img src="src/media/image/men.png" alt="" />
+              </div>
+              <h1>Unavailable Product</h1>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3
+                  class="ProductPrice text-[#E8181B] font-semibold text-xl"
+                  data-price="15000"
+                >
+                  ₦15,000
+                </h3>
+                <button
+                  class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2"
+                >
+                  <i
+                    class="fas fa-plus text-2xl text-[#191919] cursor-pointer"
+                  ></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- //Card 4 -->
+            <article
+              class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-center items-center overflow-hidden relative"
+              data-gender="unisex"
+            >
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <div
+                class="DropDown absolute z-30 top-6 px-2 h-0 overflow-hidden transition-all duration-300"
+              >
+                <div
+                  class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2"
+                >
+                  <h3>
+                    Details are unavailable at the moment with time it will be
+                    available
+                  </h3>
+                </div>
+              </div>
+              <div class="">
+                <img src="src/media/image/men.png" alt="" />
+              </div>
+              <h1>Unavailable Product</h1>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3
+                  class="ProductPrice text-[#E8181B] font-semibold text-xl"
+                  data-price="15000"
+                >
+                  ₦15,000
+                </h3>
+                <button
+                  class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2"
+                >
+                  <i
+                    class="fas fa-plus text-2xl text-[#191919] cursor-pointer"
+                  ></i>
+                </button>
+              </div>
+            </article>
+          </section>
+        </section>
+      </main>
+
+      <!-- // bottom -->
+      <div class="w-full h-20 bg-[#F4F4F4]"></div>
+    </div>
+    <article
+      class="fixed bottom-0 w-full h-16 flex flex-col justify-evenly bg-[#F4F4F4]"
+      id="footer"
+    >
+      <div class="bg-gray-400 w-full h-[0.5px]"></div>
+      <section class="flex flex-row w-full justify-around">
+        <a
+          href="index.html"
+          class="sel flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-home text-xl"></i>
+          <h3 class="">Home</h3>
+        </a>
+        <a
+          href="Shop.html"
+          class="sel flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-shop text-xl"></i>
+          <h3 class="">Shop</h3>
+        </a>
+        <a
+          href="Cart.html"
+          class="sel flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+          <h3 class="">Cart</h3>
+        </a>
+        <a
+          href="Delivery.html"
+          class="sel flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-location text-xl"></i>
+          <h3 class="">Delivery</h3>
+        </a>
+        <a
+          href="Contact.html"
+          class="sel flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-phone text-xl"></i>
+          <h3 class="">Contact</h3>
+        </a>
+      </section>
+    </article>
+
+    <script src="src/js/Shop.js" defer></script>
+  </body>
+</html>

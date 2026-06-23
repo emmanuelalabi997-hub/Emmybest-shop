@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "tailwindcss": "^4.2.4"
+  },
+  "name": "emmybest-shop",
+  "version": "1.0.0",
+  "description": "a web app specialized in speed and modern design for a perfume store",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmanuelalabi997-hub/Emmybest-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/emmanuelalabi997-hub/Emmybest-shop/issues"
+  },
+  "homepage": "https://github.com/emmanuelalabi997-hub/Emmybest-shop#readme"
+}

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery</title>
+    <link rel="stylesheet" href="src/css/output.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <style>
+    .sel {
+      color: #4a4a4a;
+      transition: all 70ms ease-in-out;
+      cursor: pointer;
+    }
+    .sel:active {
+      color: #e8181b;
+    }
+    .pass {
+      color: whitesmoke;
+    }
+  </style>
+  <body class="bg-[#F4F4F4]">
+    <section
+      class="h-full w-56 bg-[#000000cf] absolute z-50 flex flex-col justify-evenly items-center px-5 -translate-x-56 transition duration-300 blur-none"
+      id="slide"
+    >
+      <div class="w-full items-center flex justify-between py-5 flex-row">
+        <i class="sel fa-solid fa-xmark text-4xl cursor-pointer" id="ex"></i>
+        <h2
+          class="text-2xl font-sans font-semibold text-[#E8181B] cursor-pointer"
+        >
+          Emmy <span class="text-[#F4F4F4]">Best</span>
+        </h2>
+      </div>
+
+      <div class="w-full h-48 flex flex-col justify-around">
+        <a
+          href="index.html"
+          class="sel text-xl text-[#F4F4F4] font-sans cursor-pointer flex items-center gap-2"
+        >
+          <i class="fa-solid fa-home w-8"></i>Home
+        </a>
+        <a
+          href="Shop.html"
+          class="sel text-xl font-sans cursor-pointer flex items-center gap-2"
+        >
+          <i class="fa-solid fa-shop w-8"></i>Shop
+        </a>
+        <a
+          href="Cart.html"
+          class="sel text-xl font-sans cursor-pointer flex items-center gap-2"
+        >
+          <i class="fa-solid fa-cart-shopping w-8"></i>Cart
+        </a>
+        <a
+          href="Delivery.html"
+          class="sel text-xl font-sans cursor-pointer flex items-center gap-2"
+        >
+          <i class="fa-solid fa-circle-info w-8"></i>Deliver info
+        </a>
+        <a
+          href="Contact.html"
+          class="sel text-xl font-sans cursor-pointer flex items-center gap-2"
+        >
+          <i class="fa-solid fa-phone w-8"></i>Contact
+        </a>
+      </div>
+
+      <div class="bg-gray-500 w-full h-[0.5px]"></div>
+
+    <div class="w-full h-32 flex flex-col justify-around">
+    <h3 class="sel
+    text-xl  font-sans cursor-pointer ">Categories</h3>
+    <a href="Shop.html?category=men"><h3 class="sel
+    text-xl  font-sans cursor-pointer ">Men's</h3></a>
+    <a href="Shop.html?category=women">
+    <h3 class="sel
+    text-xl  font-sans cursor-pointer ">Women's</h3></a>
+    <a href="Shop.html?category=unisex">
+    <h3 class="sel
+    text-xl  font-sans cursor-pointer ">Unisex</h3></a>
+    </div>
+
+      <div class="bg-gray-500 w-full h-[0.5px]"></div>
+
+      <div class="w-full h-32 flex flex-col justify-around">
+        <h3 class="sel text-xl font-sans cursor-pointer">About Us</h3>
+        <a href="Delivery.html">
+        <h3 class="sel text-xl font-sans cursor-pointer">FAQs</h3>
+        </a>
+        <h3 class="sel text-xl font-sans cursor-pointer">Terms & Conditions</h3>
+        <h3 class="sel text-xl font-sans cursor-pointer">Privacy Policy</h3>
+      </div>
+    </section>
+
+    <div id="body" class="px-4">
+      <header class="flex flex-col">
+        <!-- //nav bar -->
+         <nav class="fixed bg-[#F4F4F4] w-full items-center flex justify-between py-5 flex-row left-0 px-4 z-40 ">
+            <i class="sel
+            fas fa-bars text-3xl text-[#0D1B3E] cursor-pointer"  id="threedot"></i>
+            <h2 class="text-2xl font-sans font-semibold text-[#0D1B3E]">EmmyBest</h2>
+            <div>
+                <div class="absolute top-[6px] right-2 w-5 h-5 text-center
+                 rounded-full bg-[#E8181B] flex justify-center items-center  text-[#F4F4F4]">
+                <h1 id="CartDisplay">0
+                </h1>
+                </div>
+              <a href="Cart.html"><i class="sel
+              fa-solid fa-cart-shopping text-2xl"></i></a>
+            </div>
+         </nav>
+      </header>
+
+
+      <main class="flex flex-col justify-between items-center w-full mt-20">
+        <h1 class="text-center font-semibold text-2xl">We're here to help!</h1>
+        <h3 class="text-center">
+          Chat with us on whatsapp <br />
+          for fast response.
+        </h3>
+
+        <section class="w-full h-48">
+          <dotlottie-player
+            src="src/json_files/whatsapp.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></dotlottie-player>
+        </section>
+
+        <div
+          class="bg-green-600 w-full h-16 rounded-full shadow-xl active:shadow-none"
+        >
+          <a
+            href="https://wa.me/....."
+            class="flex flex-row justify-center items-center gap-2 w-full h-full text-white font-semibold"
+          >
+            <i class="pass fa-brands fa-whatsapp text-3xl"></i>
+            <h3 class="text-xl">Chat with us on WhatsApp</h3>
+          </a>
+        </div>
+
+        <aside class="flex flex-row w-full justify-center items-center gap-2">
+          <div class="bg-gray-300 w-full h-[1px]"></div>
+          <h1 class="text-center">Or</h1>
+          <div class="bg-gray-300 w-full h-[1px]"></div>
+        </aside>
+
+        <section class="w-full flex flex-col justify-around gap-4">
+          <aside class="flex flex-row gap-4">
+            <div
+              class="w-10 h-10 border border-gray-400 rounded-full flex items-center justify-center"
+            >
+              <i class="fas fa-phone text-2xl cursor-pointer"></i>
+            </div>
+            <div class="flex flex-col justify-between">
+              <h1 class="font-sans cursor-pointer text-xl font-semibold">
+                Call us
+              </h1>
+              <h3 class="text-gray-500 font-sans cursor-pointer">
+                09134729702
+              </h3>
+            </div>
+          </aside>
+
+          <aside class="flex flex-row gap-4">
+            <div
+              class="w-10 h-10 border border-gray-400 rounded-full flex items-center justify-center"
+            >
+              <i class="fas fa-envelope text-2xl cursor-pointer"></i>
+            </div>
+            <div class="flex flex-col justify-between">
+              <h1 class="font-sans cursor-pointer text-xl font-semibold">
+                Email us
+              </h1>
+              <h3 class="text-gray-500 font-sans cursor-pointer">
+                support@emmybest.com
+              </h3>
+            </div>
+          </aside>
+
+          <aside class="flex flex-row gap-4">
+            <div
+              class="w-10 h-10 border border-gray-400 rounded-full flex items-center justify-center"
+            >
+              <i class="fa-brands fa-instagram text-2xl cursor-pointer"></i>
+            </div>
+            <div class="flex flex-col justify-between">
+              <h1 class="font-sans cursor-pointer text-xl font-semibold">
+                Instagram
+              </h1>
+              <h3 class="text-gray-500 font-sans cursor-pointer">
+                @emmybest_store
+              </h3>
+            </div>
+          </aside>
+        </section>
+      </main>
+
+      <div class="w-full h-20"></div>
+    </div>
+    <article
+      class="fixed bottom-0 w-full h-16 bg-[#F4F4F4] flex flex-col justify-between"
+      id="footer"
+    >
+      <div class="bg-gray-400 w-full h-[0.5px]"></div>
+      <section class="flex flex-row w-full justify-around">
+        <a
+          href="index.html"
+          class="flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-home text-xl"></i>
+          <h3 class="">Home</h3>
+        </a>
+        <a
+          href="Shop.html"
+          class="flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-shop text-xl"></i>
+          <h3 class="">Shop</h3>
+        </a>
+        <a
+          href="Cart.html"
+          class="flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+          <h3 class="">Cart</h3>
+        </a>
+        <a
+          href="Delivery.html"
+          class="flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-location text-xl"></i>
+          <h3 class="">Delivery</h3>
+        </a>
+        <a
+          href="Contact.html"
+          class="flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-phone text-xl"></i>
+          <h3 class="">Contact</h3>
+        </a>
+      </section>
+    </article>
+
+    <script src="src/js/Contact.js"></script>
+  </body>
+</html>

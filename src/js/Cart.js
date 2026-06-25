@@ -6,19 +6,28 @@ const Box2 = document.getElementById('Box2');
 const cartContainer = document.getElementById('cart-items-container');
 const check3 = document.getElementById('Check3');
 const Box3 = document.getElementById('Box3');
+const MainBody = document.getElementById("MainBody");
 
 threedot.addEventListener("click", () => {
+    // 1. Instantly snap or smoothly slide the window back to the very top
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Change to "instant" if you want it to snap instantly without sliding
+    });
+
+    // 2. Open the sidebar menu and apply your blur effects
     slide.classList.toggle("-translate-x-56");
     body.classList.toggle("blur-3xl");
     footer.classList.toggle("blur-3xl");
-})
+    MainBody.classList.add("overflow-y-hidden");
+});
 
 ex.addEventListener("click", () => {
     slide.classList.toggle("-translate-x-56");
     body.classList.toggle("blur-3xl");
     footer.classList.toggle("blur-3xl");
-})
-
+    MainBody.classList.remove("overflow-y-hidden");
+});
 // --- 1. THE COMPLETE MATH CALCULATION FUNCTION ---
 const updateOrderTotal = () => {
     let subtotal = 0;
@@ -74,7 +83,7 @@ const displayCartItems = () => {
         const itemHTML = `
             <article class="w-full border border-gray-300 flex flex-row py-2 px-1 rounded-xl hover:border-[#000000cf] duration-300">
                 <div>
-                    <img src="${item.img}" alt="" class="w-44 h-24 object-cover">
+                    <img src="${item.img}" alt="" class="w-44 h-24 object-cover rounded-2xl">
                 </div>
                 <div class="w-full flex flex-col justify-evenly pl-2">
                     <h1 class="font-semibold text-[18px]">${item.name}</h1>
@@ -142,12 +151,42 @@ if (cartContainer) {
 }
 
 // Checkbox event setups
-Check.addEventListener('click', () => { Check.classList.add('bg-[#E8181B]'); Box.classList.remove('bg-[#E8181B]'); check3.classList.remove('bg-[#E8181B]'); Box3.classList.remove('bg-[#E8181B]'); document.getElementById('delivery-fee').textContent = "N1000"; updateOrderTotal(); });
-Box.addEventListener('click', () => { Box.classList.add('bg-[#E8181B]'); Check.classList.remove('bg-[#E8181B]'); check3.classList.remove('bg-[#E8181B]'); Box3.classList.remove('bg-[#E8181B]'); document.getElementById('delivery-fee').textContent = "N0"; updateOrderTotal(); });
-check3.addEventListener('click', () => { check3.classList.add('bg-[#E8181B]'); Box3.classList.remove('bg-[#E8181B]'); Check.classList.remove('bg-[#E8181B]'); Box.classList.remove('bg-[#E8181B]'); document.getElementById('delivery-fee').textContent = "N3000"; updateOrderTotal(); });
-Box3.addEventListener('click', () => { Box3.classList.add('bg-[#E8181B]'); check3.classList.remove('bg-[#E8181B]'); Check.classList.remove('bg-[#E8181B]'); Box.classList.remove('bg-[#E8181B]'); document.getElementById('delivery-fee').textContent = "N0"; updateOrderTotal(); });
-Check2.addEventListener('click', () => { Check2.classList.add('bg-[#E8181B]'); Box2.classList.remove('bg-[#E8181B]'); });
-Box2.addEventListener('click', () => { Box2.classList.add('bg-[#E8181B]'); Check2.classList.remove('bg-[#E8181B]'); });
+Check.addEventListener('click', () => { 
+    Check.classList.add('bg-[#E8181B]'); 
+    Box.classList.remove('bg-[#E8181B]'); 
+    check3.classList.remove('bg-[#E8181B]'); 
+    Box3.classList.remove('bg-[#E8181B]'); 
+    document.getElementById('delivery-fee').textContent = "N1000"; updateOrderTotal(); 
+});
+Box.addEventListener('click', () => { 
+    Box.classList.add('bg-[#E8181B]'); 
+    Check.classList.remove('bg-[#E8181B]'); 
+    check3.classList.remove('bg-[#E8181B]'); 
+    Box3.classList.remove('bg-[#E8181B]'); 
+    document.getElementById('delivery-fee').textContent = "N0"; updateOrderTotal(); 
+});
+check3.addEventListener('click', () => { 
+    check3.classList.add('bg-[#E8181B]'); 
+    Box3.classList.remove('bg-[#E8181B]'); 
+    Check.classList.remove('bg-[#E8181B]'); 
+    Box.classList.remove('bg-[#E8181B]'); 
+    document.getElementById('delivery-fee').textContent = "N3000"; updateOrderTotal(); 
+});
+Box3.addEventListener('click', () => { 
+    Box3.classList.add('bg-[#E8181B]'); 
+    check3.classList.remove('bg-[#E8181B]'); 
+    Check.classList.remove('bg-[#E8181B]'); 
+    Box.classList.remove('bg-[#E8181B]'); 
+    document.getElementById('delivery-fee').textContent = "N0"; updateOrderTotal(); 
+});
+Check2.addEventListener('click', () => { 
+    Check2.classList.add('bg-[#E8181B]'); 
+    Box2.classList.remove('bg-[#E8181B]'); 
+});
+Box2.addEventListener('click', () => { 
+    Box2.classList.add('bg-[#E8181B]'); 
+    Check2.classList.remove('bg-[#E8181B]'); 
+});
 
 
 // --- 4. WHATSAPP ORDER SUBMISSION ---
@@ -155,6 +194,8 @@ const orderNowBtn = document.getElementById('order-now-btn');
 
 if (orderNowBtn) {
     orderNowBtn.addEventListener('click', () => {
+
+
         // 1. Grab the latest items from localStorage
         let cart = JSON.parse(localStorage.getItem('emmyBestCart')) || [];
         
@@ -174,9 +215,17 @@ if (orderNowBtn) {
         if (Box.classList.contains('bg-[#E8181B]')) deliveryMethod = "Pickup from Store";
         if (check3.classList.contains('bg-[#E8181B]')) deliveryMethod = "Home Delivery (Outside Lagos)";
         if (Box3.classList.contains('bg-[#E8181B]')) deliveryMethod = "Pickup from Store";
+        if (!Check.classList.contains('bg-[#E8181B]') && !Box.classList.contains('bg-[#E8181B]') && !Box3.classList.contains('bg-[#E8181B]') && !check3.classList.contains('bg-[#E8181B]')) {
+            alert("Input a delivery method")
+            return;
+        }if (!Check2.classList.contains('bg-[#E8181B]') && !Box2.classList.contains('bg-[#E8181B]')) {
+             alert("Input a payment method")
+            return;
+        } 
+        
 
         let paymentMethod = "Not Selected";
-        if (Check2.classList.contains('bg-[#E8181B]')) paymentMethod = "Pay before Delivery/Pickup";
+        if (Check2.classList.contains('bg-[#E8181B]')) paymentMethod = "Pay before Delivery/Pickup"
         if (Box2.classList.contains('bg-[#E8181B]')) paymentMethod = "Pay on Delivery/Pickup";
 
         // 4. Build a beautiful, readable message string

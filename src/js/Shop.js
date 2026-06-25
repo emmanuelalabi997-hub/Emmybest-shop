@@ -20,18 +20,29 @@ const ProductName = document.querySelectorAll(".productname");
 const searchInput = document.getElementById("site-search");
 const searchBtn = document.getElementById("SearchBtn");
 const filterSection = document.getElementById("FilterSection");
-const unavailable= document.getElementById("unavailable")
+const unavailable= document.getElementById("unavailable");
+const MainBody = document.getElementById("MainBody");
+
 threedot.addEventListener("click", () => {
+    // 1. Instantly snap or smoothly slide the window back to the very top
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Change to "instant" if you want it to snap instantly without sliding
+    });
+
+    // 2. Open the sidebar menu and apply your blur effects
     slide.classList.toggle("-translate-x-56");
     body.classList.toggle("blur-3xl");
     footer.classList.toggle("blur-3xl");
-})
+    MainBody.classList.add("overflow-y-hidden");
+});
 
 ex.addEventListener("click", () => {
     slide.classList.toggle("-translate-x-56");
     body.classList.toggle("blur-3xl");
     footer.classList.toggle("blur-3xl");
-})
+    MainBody.classList.remove("overflow-y-hidden");
+});
 
 Filter.addEventListener("click", () => {
     // Toggle the backgrounds (turn one off, turn the other on)
@@ -112,59 +123,115 @@ if (productBtns.length > 0) {
         });
     });
 }
-if (filterButtons.length > 0 && productCards.length > 0) {
-    filterButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            // Get the gender category from the clicked button (e.g., "male")
-            const targetGender = button.getAttribute("data-target");
+filterButtons.forEach(button => {
+    button.addEventListener("click", (e) => {
+        // Prevent default behavior if needed
+        e.preventDefault();
 
-            // Loop through all product cards
-            productCards.forEach((card) => {
-                const cardGender = card.getAttribute("data-gender");
+        // 1. Manage Active Button Styling (Switch red background)
+        filterButtons.forEach(btn => btn.classList.remove("bg-[#E8181B]", "text-white"));
+        button.classList.add("bg-[#E8181B]", "text-white");
 
-                // If "All" is clicked, or if the card matches the clicked gender
-                if (targetGender === "all" || cardGender === targetGender) {
-                    card.classList.remove("hidden"); // Show it
-                } else {
-                    card.classList.add("hidden");    // Hide it
-                }
-            });
+        const targetGender = button.getAttribute("data-target");
+        let globalMatchFound = false;
+
+        // 2. Filter the Product Cards based on gender
+        productCards.forEach(card => {
+            const cardGender = card.getAttribute("data-gender");
+
+            if (targetGender === "all" || cardGender === targetGender) {
+                card.classList.remove("hidden");
+                globalMatchFound = true;
+            } else {
+                card.classList.add("hidden");
+            }
         });
+
+        // 3. FIX: Hide section headers if all products inside that section are hidden
+        ProductName.forEach(header => {
+            // Find the parent container section that holds this header and its grid rows
+            const parentSection = header.closest("section");
+            if (!parentSection) return;
+
+            // Count how many product cards inside this specific section are still visible
+            const visibleCardsInSection = parentSection.querySelectorAll(".ProductCard:not(.hidden)");
+
+            if (visibleCardsInSection.length === 0 && targetGender !== "all") {
+                // Hide the header if no matching products exist in this category
+                header.classList.add("hidden");
+            } else {
+                // Show the header if at least one matching product is visible
+                header.classList.remove("hidden");
+            }
+        });
+
+        // 4. Handle the "Not Found" global state banner
+        if (globalMatchFound) {
+            unavailable.classList.add("hidden");
+        } else {
+            unavailable.classList.remove("hidden");
+        }
     });
-}
+});
 
 
-searchBtn.addEventListener("click", () => {
+// --- FIX 1: Target placeholders as a class collection ---
+const ProductHiddenCards = document.querySelectorAll(".layout-placeholder");
+
+searchBtn.addEventListener("click", (event) => {
+    event.preventDefault(); // Stop page reload
+    
     let text = searchInput.value.toLowerCase().trim();
-    
+    let matchFound = false;
+
     productCards.forEach(card => {
-        let title = card.querySelector("h1").textContent.toLowerCase();
-        const written = title.includes(text)
-
-        ProductName.forEach(CardName => {
-             if (written || text === "") {
-            CardName.classList.toggle("hidden", false); 
-            
-           
-        } else {
-            CardName.classList.toggle("hidden", true); 
-
+        // --- FIX 2: If it's one of your width placeholders, skip it entirely ---
+        if (card.classList.contains('layout-placeholder')) {
+            return; 
         }
-        } )
-        
-        // If it matches, or if search is empty, show it!
+
+        let titleEl = card.querySelector("h1");
+        if (!titleEl) return; 
+
+        let title = titleEl.textContent.toLowerCase();
+        const written = title.includes(text);
+
+        // Hide or show real products based on search query
         if (written || text === "") {
-            card.classList.toggle("hidden", false); 
-            unavailable.classList.toggle("hidden",true);
-           
+            card.classList.remove("hidden");
+            matchFound = true; // A real product matched!
         } else {
-            card.classList.toggle("hidden", true); 
-            unavailable.classList.toggle("hidden",false);
+            card.classList.add("hidden");
         }
-    })
-    
     });
-    
+
+    // --- FIX 3: Manage your Category Headers ---
+    ProductName.forEach(CardName => {
+        if (text !== "") {
+            CardName.classList.add("hidden"); // Hide headers when filtering
+        } else {
+            CardName.classList.remove("hidden"); // Show them when search is empty
+        }
+    });
+
+    // --- FIX 4: Handle "Not Found" state and placeholder cards together ---
+    if (matchFound || text === "") {
+        unavailable.classList.add("hidden"); 
+        
+        // Hide width placeholders if we are actively showing search results 
+        // (so they don't pop up out of nowhere)
+        ProductHiddenCards.forEach(hiddenCard => {
+            hiddenCard.classList.add("hidden");
+        });
+    } else {
+        unavailable.classList.remove("hidden"); 
+        
+        // Optional: Keep them hidden if nothing matches at all
+        ProductHiddenCards.forEach(hiddenCard => {
+            hiddenCard.classList.add("hidden");
+        });
+    }
+});
 // ... Keep your menu slider and search filters at the top exactly as they are ...
 
 // Update the badge with the correct item quantity count on load

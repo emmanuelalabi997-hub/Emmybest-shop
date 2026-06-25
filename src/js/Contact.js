@@ -6,18 +6,28 @@ const body = document.getElementById("body");
 const footer = document.getElementById("footer");
 const productBtns = document.querySelectorAll('.product-btn');
 const cartDisplay = document.getElementById("CartDisplay");
+const MainBody = document.getElementById("MainBody");
 
 threedot.addEventListener("click", () => {
+    // 1. Instantly snap or smoothly slide the window back to the very top
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Change to "instant" if you want it to snap instantly without sliding
+    });
+
+    // 2. Open the sidebar menu and apply your blur effects
     slide.classList.toggle("-translate-x-56");
     body.classList.toggle("blur-3xl");
     footer.classList.toggle("blur-3xl");
-})
+    MainBody.classList.add("overflow-y-hidden");
+});
 
 ex.addEventListener("click", () => {
     slide.classList.toggle("-translate-x-56");
     body.classList.toggle("blur-3xl");
     footer.classList.toggle("blur-3xl");
-})
+    MainBody.classList.remove("overflow-y-hidden");
+});
 
 
 

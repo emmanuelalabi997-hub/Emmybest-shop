@@ -11,6 +11,9 @@
       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <style>
+     *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
     .sel {
       color: #4a4a4a;
       transition: all 70ms ease-in-out;
@@ -19,12 +22,21 @@
     .sel:active {
       color: #e8181b;
     }
+    .selx {
+      color: #c2c1c1;
+      transition: all 70ms ease-in-out;
+      cursor: pointer;
+    }
+    .selx:active {
+      color: #e8181b;
+    }
     .pass {
       color: whitesmoke;
     }
   </style>
-  <body class="bg-[#F4F4F4]">
-    <section
+  <body class="bg-[#F4F4F4]"  id="MainBody">
+    <!-- //sidebar -->
+     <section
       class="h-full w-56 bg-[#000000cf] absolute z-50 flex flex-col justify-evenly items-center px-5 -translate-x-56 transition duration-300 blur-none"
       id="slide"
     >
@@ -40,60 +52,61 @@
       <div class="w-full h-48 flex flex-col justify-around">
         <a
           href="index.html"
-          class="sel text-xl text-[#F4F4F4] font-sans cursor-pointer flex items-center gap-2"
+          class="selx text-xl font-sans cursor-pointer flex items-center gap-2 "
         >
-          <i class="fa-solid fa-home w-8"></i>Home
+          <i class="fa-solid fa-home w-8 "></i>Home
         </a>
         <a
           href="Shop.html"
-          class="sel text-xl font-sans cursor-pointer flex items-center gap-2"
+          class="selx text-xl font-sans cursor-pointer flex items-center gap-2"
         >
           <i class="fa-solid fa-shop w-8"></i>Shop
         </a>
         <a
           href="Cart.html"
-          class="sel text-xl font-sans cursor-pointer flex items-center gap-2"
+          class="selx text-xl font-sans cursor-pointer flex items-center gap-2"
         >
           <i class="fa-solid fa-cart-shopping w-8"></i>Cart
         </a>
         <a
           href="Delivery.html"
-          class="sel text-xl font-sans cursor-pointer flex items-center gap-2"
+          class="selx text-xl font-sans cursor-pointer flex items-center gap-2"
         >
           <i class="fa-solid fa-circle-info w-8"></i>Deliver info
         </a>
         <a
           href="Contact.html"
-          class="sel text-xl font-sans cursor-pointer flex items-center gap-2"
+          class="selx text-xl font-sans cursor-pointer flex items-center gap-2"
         >
-          <i class="fa-solid fa-phone w-8"></i>Contact
+          <i class="fa-solid fa-phone w-8 text-[#E8181B]"></i><h1 class="text-[#E8181B]">Contact</h1>
         </a>
       </div>
 
       <div class="bg-gray-500 w-full h-[0.5px]"></div>
 
-    <div class="w-full h-32 flex flex-col justify-around">
-    <h3 class="sel
-    text-xl  font-sans cursor-pointer ">Categories</h3>
-    <a href="Shop.html?category=men"><h3 class="sel
-    text-xl  font-sans cursor-pointer ">Men's</h3></a>
-    <a href="Shop.html?category=women">
-    <h3 class="sel
-    text-xl  font-sans cursor-pointer ">Women's</h3></a>
-    <a href="Shop.html?category=unisex">
-    <h3 class="sel
-    text-xl  font-sans cursor-pointer ">Unisex</h3></a>
-    </div>
+               <div class="w-full h-32 flex flex-col justify-around">
+                <h3 class="selx
+                text-xl  font-sans cursor-pointer ">Categories</h3>
+                <a href="Shop.html?category=men"><h3 class="selx
+                text-xl  font-sans cursor-pointer ">Men's</h3></a>
+                <a href="Shop.html?category=women">
+                <h3 class="selx
+                text-xl  font-sans cursor-pointer ">Women's</h3></a>
+                <a href="Shop.html?category=unisex">
+                <h3 class="selx
+                text-xl  font-sans cursor-pointer ">Unisex</h3></a>
+            </div>
+
 
       <div class="bg-gray-500 w-full h-[0.5px]"></div>
 
       <div class="w-full h-32 flex flex-col justify-around">
-        <h3 class="sel text-xl font-sans cursor-pointer">About Us</h3>
+        <h3 class="selx text-xl font-sans cursor-pointer">About Us</h3>
         <a href="Delivery.html">
-        <h3 class="sel text-xl font-sans cursor-pointer">FAQs</h3>
+        <h3 class="selx text-xl font-sans cursor-pointer">FAQs</h3>
         </a>
-        <h3 class="sel text-xl font-sans cursor-pointer">Terms & Conditions</h3>
-        <h3 class="sel text-xl font-sans cursor-pointer">Privacy Policy</h3>
+        <h3 class="selx text-xl font-sans cursor-pointer">Terms & Conditions</h3>
+        <h3 class="selx text-xl font-sans cursor-pointer">Privacy Policy</h3>
       </div>
     </section>
 
@@ -103,7 +116,7 @@
          <nav class="fixed bg-[#F4F4F4] w-full items-center flex justify-between py-5 flex-row left-0 px-4 z-40 ">
             <i class="sel
             fas fa-bars text-3xl text-[#0D1B3E] cursor-pointer"  id="threedot"></i>
-            <h2 class="text-2xl font-sans font-semibold text-[#0D1B3E]">EmmyBest</h2>
+            <h2 class="text-2xl font-sans font-semibold text-[#0D1B3E]">Contact</h2>
             <div>
                 <div class="absolute top-[6px] right-2 w-5 h-5 text-center
                  rounded-full bg-[#E8181B] flex justify-center items-center  text-[#F4F4F4]">
@@ -205,49 +218,36 @@
 
       <div class="w-full h-20"></div>
     </div>
-    <article
-      class="fixed bottom-0 w-full h-16 bg-[#F4F4F4] flex flex-col justify-between"
-      id="footer"
-    >
-      <div class="bg-gray-400 w-full h-[0.5px]"></div>
-      <section class="flex flex-row w-full justify-around">
-        <a
-          href="index.html"
-          class="flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
-        >
-          <i class="fa-solid fa-home text-xl"></i>
-          <h3 class="">Home</h3>
-        </a>
-        <a
-          href="Shop.html"
-          class="flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
-        >
-          <i class="fa-solid fa-shop text-xl"></i>
-          <h3 class="">Shop</h3>
-        </a>
-        <a
-          href="Cart.html"
-          class="flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
-        >
-          <i class="fa-solid fa-cart-shopping text-xl"></i>
-          <h3 class="">Cart</h3>
-        </a>
-        <a
-          href="Delivery.html"
-          class="flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
-        >
-          <i class="fa-solid fa-location text-xl"></i>
-          <h3 class="">Delivery</h3>
-        </a>
-        <a
-          href="Contact.html"
-          class="flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
-        >
-          <i class="fa-solid fa-phone text-xl"></i>
-          <h3 class="">Contact</h3>
-        </a>
-      </section>
+   <!-- //bottom -->
+    <div class="w-full h-20 bg-[#F4F4F4] "></div>
+          </div>
+         <article class=" fixed bottom-0 w-full h-16 flex flex-col justify-between bg-[#F4F4F4] " id="footer">
+         <div class="bg-gray-400 w-full h-[0.5px]"></div>
+         <section class="flex flex-row w-full justify-around">
+            <a href="index.html" class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer ">
+                <i class="fa-solid fa-home text-xl"></i>
+                <h3 class="">Home</h3>
+            </a>
+             <a href="Shop.html" class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer ">
+                <i class="fa-solid fa-shop text-xl"></i>
+                <h3 class="">Shop</h3>
+            </a>
+             <a href="Cart.html" class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer ">
+                <i class="fa-solid fa-cart-shopping text-xl"></i>
+                <h3 class="">Cart</h3>
+            </a>
+             <a href="Delivery.html" class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer ">
+                <i class="fa-solid fa-location text-xl"></i>
+                <h3 class="">Delivery</h3>
+            </a>
+             <a href="Contact.html" class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer ">
+                <i class="fa-solid fa-phone text-xl text-[#E8181B]"></i>
+                <h3 class="text-[#E8181B]">Contact</h3>
+            </a>
+         </section>
+        
     </article>
+    
 
     <script src="src/js/Contact.js"></script>
   </body>

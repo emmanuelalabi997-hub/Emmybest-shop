@@ -36,7 +36,7 @@
 
 <body class="bg-black font-sans font-semibold " id="MainBody">
    <!-- //sidebar -->
-      <section class="h-full w-56 bg-[#000000cf] absolute z-50 flex flex-col justify-evenly items-center px-5 -translate-x-56 transition duration-300 blur-none"id="slide">
+      <section class="h-full w-56 bg-[#000000cf] absolute z-99 flex flex-col justify-evenly items-center px-5 -translate-x-56 transition duration-300 blur-none"id="slide">
       <div class="w-full items-center flex justify-between py-5 flex-row">
         <i class="sel fa-solid fa-xmark text-4xl cursor-pointer" id="ex"></i>
         <h2
@@ -82,7 +82,7 @@
       <div class="bg-gray-500 w-full h-[0.5px]"></div>
 
                <div class="w-full h-32 flex flex-col justify-around">
-                <h3 class="selx
+                <h3 class="text-[#F4F4F4]
                 text-xl  font-sans cursor-pointer ">Categories</h3>
                 <a href="Shop.html?category=men"><h3 class="selx
                 text-xl  font-sans cursor-pointer ">Men's</h3></a>
@@ -98,12 +98,12 @@
       <div class="bg-gray-500 w-full h-[0.5px]"></div>
 
       <div class="w-full h-32 flex flex-col justify-around">
-        <h3 class="selx text-xl font-sans cursor-pointer">About Us</h3>
+        <h3 class=" text-xl font-sans cursor-pointer text-[#F4F4F4]">About Us</h3>
         <a href="Delivery.html">
         <h3 class="selx text-xl font-sans cursor-pointer">FAQs</h3>
         </a>
-        <h3 class="selx text-xl font-sans cursor-pointer">Terms & Conditions</h3>
-        <h3 class="selx text-xl font-sans cursor-pointer">Privacy Policy</h3>
+        <h3 class="selx text-xl font-sans cursor-pointer" id="terms">Terms & Conditions</h3>
+        <h3 class="selx text-xl font-sans cursor-pointer" id="policy">Privacy Policy</h3>
       </div>
     </section>
 
@@ -201,7 +201,8 @@
             <h1 class="font-semibold font-sans text-2xl text-[#000000cf] text-center">Top sales</h1>
             <a href="Shop.html"><h1 class="font-semibold font-sans text-xl text-[#000000cf] text-center underline cursor-pointer active:text-red-500">More...</h1></a>
 
-            </aside>    
+            </aside>  
+            <!-- //1st section   -->
         <div class="w-full grid grid-cols-2 gap-3 cursor-pointer">
            <!-- mist//Card 1 -->
             <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
@@ -255,7 +256,7 @@
               </div>
             </article>
           </div>
-            
+            <!-- //2nd section -->
           <div class="w-full grid grid-cols-2 gap-3 cursor-pointer">
             <!-- spray//Card 1 -->
             <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
@@ -278,6 +279,30 @@
               </div>
               <div class="flex flex-row w-full justify-between items-center">
                 <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="2000">₦2,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+             <!-- Cologne//Card 1 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It doesn't evaporate quickly, making its rich scents last for days on skin or clothes.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_1.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Almas oil Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="9500">₦9,500</h3>
                 <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
                   <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
                 </button>

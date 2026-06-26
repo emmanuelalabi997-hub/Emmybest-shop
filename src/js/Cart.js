@@ -7,19 +7,39 @@ const cartContainer = document.getElementById('cart-items-container');
 const check3 = document.getElementById('Check3');
 const Box3 = document.getElementById('Box3');
 const MainBody = document.getElementById("MainBody");
+const policy = document.getElementById("policy");
+const Term = document.getElementById("terms")
+
+policy.addEventListener('click', () => {
+    alert("This is unavailable at the moment");
+    return;
+});
+Term.addEventListener('click', () => {
+    alert("This is unavailable at the moment");
+    return;
+});
 
 threedot.addEventListener("click", () => {
-    // 1. Instantly snap or smoothly slide the window back to the very top
     window.scrollTo({
         top: 0,
-        behavior: "smooth" // Change to "instant" if you want it to snap instantly without sliding
+        behavior: "smooth"
     });
 
-    // 2. Open the sidebar menu and apply your blur effects
     slide.classList.toggle("-translate-x-56");
     body.classList.toggle("blur-3xl");
     footer.classList.toggle("blur-3xl");
-    MainBody.classList.add("overflow-y-hidden");
+    
+    // Toggle overflow hidden for Android/Desktop
+    MainBody.classList.toggle("overflow-y-hidden");
+
+    // FIX FOR iOS SAFARI:
+    if (MainBody.classList.contains("overflow-y-hidden")) {
+        // When menu is open, lock touch scrolling on iOS
+        MainBody.style.touchAction = "none";
+    } else {
+        // When menu is closed, bring scrolling back
+        MainBody.style.touchAction = "auto";
+    }
 });
 
 ex.addEventListener("click", () => {
@@ -253,8 +273,8 @@ if (orderNowBtn) {
         let encodedMessage = encodeURIComponent(message);
 
         // Replace 234XXXXXXXXXX with your actual WhatsApp business phone number
-        let whatsappNumber = "2349134729702"; 
-        let whatsappURL = `https://wa.me/${9134729702}?text=${encodedMessage}`;
+        let whatsappNumber = "2348121756920"; 
+        let whatsappURL = `https://wa.me/${8121756920}?text=${encodedMessage}`;
 
         // 6. Automatically redirect the browser page over to WhatsApp live!
         window.open(whatsappURL, '_blank');

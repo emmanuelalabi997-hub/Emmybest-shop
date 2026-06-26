@@ -216,6 +216,9 @@
   .start {
     inset-inline-start: var(--spacing);
   }
+  .end {
+    inset-inline-end: var(--spacing);
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -365,6 +368,9 @@
   }
   .h-60 {
     height: calc(var(--spacing) * 60);
+  }
+  .h-96 {
+    height: calc(var(--spacing) * 96);
   }
   .h-\[0\.5px\] {
     height: 0.5px;

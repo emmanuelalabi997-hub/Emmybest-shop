@@ -40,7 +40,7 @@
   <body class="bg-[#F4F4F4]" id="MainBody">
     <!-- //sidebar -->
     <section
-      class="h-full w-56 bg-[#000000cf] absolute z-50 flex flex-col justify-evenly items-center px-5 -translate-x-56 transition duration-300 blur-none"
+      class="h-full w-56 bg-[#000000cf] absolute z-99 flex flex-col justify-evenly items-center px-5 -translate-x-56 transition duration-300 blur-none"
       id="slide"
     >
       <div class="w-full items-center flex justify-between py-5 flex-row">
@@ -71,7 +71,7 @@
       <div class="bg-gray-500 w-full h-[0.5px]"></div>
 
       <div class="w-full h-32 flex flex-col justify-around">
-        <h3 class="selx text-xl font-sans cursor-pointer">Categories</h3>
+        <h3 class=" text-xl font-sans cursor-pointer text-[#F4F4F4]">Categories</h3>
         <a href="Shop.html?category=men"><h3 class="selx text-xl font-sans cursor-pointer">Men's</h3></a>
         <a href="Shop.html?category=women"><h3 class="selx text-xl font-sans cursor-pointer">Women's</h3></a>
         <a href="Shop.html?category=unisex"><h3 class="selx text-xl font-sans cursor-pointer">Unisex</h3></a>
@@ -80,10 +80,10 @@
       <div class="bg-gray-500 w-full h-[0.5px]"></div>
 
       <div class="w-full h-32 flex flex-col justify-around">
-        <h3 class="selx text-xl font-sans cursor-pointer">About Us</h3>
+        <h3 class=" text-xl font-sans cursor-pointer text-[#F4F4F4]">About Us</h3>
         <a href="Delivery.html"><h3 class="selx text-xl font-sans cursor-pointer">FAQs</h3></a>
-        <h3 class="selx text-xl font-sans cursor-pointer">Terms & Conditions</h3>
-        <h3 class="selx text-xl font-sans cursor-pointer">Privacy Policy</h3>
+        <h3 class="selx text-xl font-sans cursor-pointer" id="terms">Terms & Conditions</h3>
+        <h3 class="selx text-xl font-sans cursor-pointer" id="policy">Privacy Policy</h3>
       </div>
     </section>
 
@@ -140,7 +140,575 @@
           <h1>We don't currently have the fragrance you are looking for.</h1>
         </div>
 
-        <!-- --- SECTION 1: MIST --- -->
+        <!-- --- SECTION 1: COLOGNE --- -->
+        <section class="w-full flex flex-col gap-2">
+          <h1 class="productname font-semibold font-sans text-2xl text-[#000000cf]">
+            Cologne
+          </h1>
+           <!-- COLOGNE//CARD A -->
+          <div class="w-full grid grid-cols-2 gap-3 cursor-pointer">
+            <!-- Cologne//Card 1 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It doesn't evaporate quickly, making its rich scents last for days on skin or clothes.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_1.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Almas oil Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="9500">₦9,500</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+            <!-- Cologne//Card 2 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="women">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a budget spray with a warm, spicy scent that projects strongly and lasts all day.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_2.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1> Red diamond Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="4500">₦4,500</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+            <!-- COLOGNE//CARD B -->
+          <div class="w-full grid grid-cols-2 gap-3 cursor-pointer">
+            <!-- Cologne//Card 3 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="women">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a sweet, warm vanilla spray with hints of spice, perfect for cozy or evening wear.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_3.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Vanilla Voyage Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="33000">₦33,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+            <!-- Cologne//Card 4 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="women">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a fresh, floral spray with sweet, bright notes, ideal for a clean and light daytime scent.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_4.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Floriana Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="6000">₦6,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+          <!-- COLOGNE//CARD C -->
+          <div class="w-full grid grid-cols-2 gap-3 cursor-pointer">
+            <!-- Cologne//Card 5 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around 
+            items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a rich, luxury-inspired spray with sweet saffron and amberwood notes that leaves a strong, heavy trail.
+                    </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_5.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Bakarrat Cologne 25ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="2500">₦2,500</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+            <!-- Cologne//Card 6 -->
+             <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around 
+            items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is an intense, woody Arabian spray featuring heavy oud, smoky incense, and warm spices that lasts for days.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_6.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Oud al' layl lattaffa Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="10000">₦10,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+          <!-- COLOGNE//CARD D -->
+          <div class="w-full grid grid-cols-2 gap-3 cursor-pointer">
+            <!-- Cologne//Card 7 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="men">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a bold, long-lasting spray featuring sharp lemon, smoky birch, and deep woody notes that projects heavily.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_7.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Club d'nuit intense cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="46000">₦46,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+            <!-- Cologne//Card 8 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a fresh, aquatic marine spray with crisp citrus notes, delivering a clean, sporty, ocean-like breeze vibe.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_8.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Matelot Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="13000">₦13,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+          <!-- COLOGNE//CARD E -->
+          <div class="w-full grid grid-cols-2 gap-3 cursor-pointer">
+            <!-- Cologne//Card 9 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="men">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a bright, sweet Arabian spray featuring rich pineapple and smoky woody notes that lasts all day.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_9.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Quaed Alfursan Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="22000">₦22,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+            <!-- Cologne//Card 10 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a rich, unisex spray with sweet vanilla, warm cacao, and soft berry notes that creates a cozy trail.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_10.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Nebras Lattaffa Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="28000">₦28,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+          <!-- COLOGNE//CARD F -->
+          <div class="w-full grid grid-cols-2 gap-3 cursor-pointer">
+            <!-- Cologne//Card 11 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="men">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a loud, sweet party spray featuring crisp apple, spicy cinnamon, and heavy vanilla that projects intensely.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_11.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>9PM black Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="46000">₦46,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+             <!-- Cologne//Card 12 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="men">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a smooth, sweet Arabian spray with fresh apple, warm cinnamon, and deep woody notes that lasts all day.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_12.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Hayatti Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="20000">₦20,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+          <!-- COLOGNE//CARD G -->
+          <div class="w-full grid grid-cols-2 gap-3 cursor-pointer">
+            <!-- Cologne//Card 13 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a loud, sweet spray featuring juicy pineapple, crisp apple, and rich caramel with heavy projection.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_13.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>9PM Rebel Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="46000">₦46,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+             <!-- Cologne//Card 14 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a smooth, high-end spray featuring rich iris, warm coffee, and sweet vanilla with a seductive, luxury trail.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_14.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Valentino Cologne 25ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="2500">₦2,500</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+          <!-- COLOGNE//CARD H -->
+          <div class="w-full grid grid-cols-2 gap-3 cursor-pointer">
+            <!-- Cologne//Card 15 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is an ultra-sweet, playful spray featuring rich caramel, warm vanilla, and soft sugary notes that creates a cozy trail.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_15.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Sugar Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="17000">₦17,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+             <!-- Cologne//Card 16 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a rich, exotic spray featuring deep oud, smooth leather, and warm amber with a long-lasting trail.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_16.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Khair Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="26000">₦26,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+          <!-- COLOGNE//CARD I -->
+          <div class="w-full grid grid-cols-2 gap-3 cursor-pointer">
+            <!-- Cologne//Card 17 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a sharp, fresh spray featuring crisp citrus, clean lavender, and warm woody notes that makes for a great daily office scent.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_17.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Smart Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="5500">₦5,500</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+             <!-- Cologne//Card 18 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="men">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a rich, seductive spray featuring warm cardamom, sweet vanilla, and deep lavender notes that leaves a smooth, magnetic trail.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_18.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>His Confession Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="30000">₦30,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+          <!-- COLOGNE//CARD J -->
+          <div class="w-full grid grid-cols-2 gap-3 cursor-pointer">
+            <!-- Cologne//Card 19 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="women">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a mysterious, creamy Arabian spray featuring warm cinnamon, rich tuberose, and sweet vanilla notes that leaves a long-lasting, milky-gourmand trail.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_18.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>her Confession 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="30000">₦30,000</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+             <!-- Cologne//Card 20 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a loud, luxury-style spray featuring sharp grapefruit, warm cinnamon, and rich amber notes that creates a bold, metallic-gold trail.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_19.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>24K Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="4500">₦4,500</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+          <!-- COLOGNE//CARD K -->
+          <div class="w-full grid grid-cols-2 gap-3 cursor-pointer">
+            <!-- Cologne//Card 21 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a rich, warm spray featuring sweet grapes, spicy nutmeg, and deep woody oud notes that creates a smooth, mesmerizing trail.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_20.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Genie Mousuf Cologne 100ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="3500">₦3,500</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+             <!-- Cologne//Card 22 -->
+            <article class="ProductCard border border-gray-300 w-full rounded-2xl p-2 flex flex-col gap-2 justify-around
+             items-center overflow-hidden relative" data-gender="unisex">
+              <div class="PullDown w-16 h-3 rounded-full bg-gray-300"></div>
+              <aside class="DropDown absolute z-30 top-7 px-2 h-0 overflow-hidden transition-all duration-300">
+                <div class="text-center bg-[#000000cf] text-[#F4F4F4] text-[15px] font-sans font-semibold rounded-2xl p-2">
+                  <h3>
+                    It is a vibrant pocket-sized spray collection featuring sweet gourmand clones that leave a budget-friendly trail.
+                  </h3>
+                </div>
+              </aside>
+              <div class="border border-gray-300 h-40 w-full rounded-2xl flex items-center">
+                <img src="src/media/image/cologne_21.webp" alt="" class="rounded-2xl h-40 w-full">
+              </div>
+              <div class="h-12 w-full">
+                <h1>Kaly Cologne 50ML</h1>
+              </div>
+              <div class="flex flex-row w-full justify-between items-center">
+                <h3 class="ProductPrice text-[#E8181B] font-semibold text-xl" data-price="7500">₦7,500</h3>
+                <button class="product-btn border border-gray-300 rounded-full flex justify-center items-center p-2">
+                  <i class="fas fa-plus text-2xl text-[#191919] cursor-pointer"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- --- SECTION 2: MIST --- -->
         <section class="w-full flex flex-col gap-2">
           <h1 class="productname font-semibold font-sans text-2xl text-[#000000cf]">
             Mist 
@@ -448,7 +1016,7 @@
           </div>
         </section>
 
-        <!-- --- SECTION 2: RollOn --- -->
+        <!-- --- SECTION 3: RollOn --- -->
         <section class="w-full flex flex-col gap-2">
           <h1 class="productname font-semibold font-sans text-2xl text-[#000000cf]">
             Roll On
@@ -610,7 +1178,7 @@
           </div>
         </section>
 
-        <!-- --- SECTION 3: Body spray --- -->
+        <!-- --- SECTION 4: Body spray --- -->
         <section class="w-full flex flex-col gap-2">
           <h1 class="productname font-semibold font-sans text-2xl text-[#000000cf]">
           Body Spray

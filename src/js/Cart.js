@@ -176,7 +176,7 @@ Check.addEventListener('click', () => {
     Box.classList.remove('bg-[#E8181B]'); 
     check3.classList.remove('bg-[#E8181B]'); 
     Box3.classList.remove('bg-[#E8181B]'); 
-    document.getElementById('delivery-fee').textContent = "N1000"; updateOrderTotal(); 
+    document.getElementById('delivery-fee').textContent = "N4000"; updateOrderTotal(); 
 });
 Box.addEventListener('click', () => { 
     Box.classList.add('bg-[#E8181B]'); 
@@ -190,7 +190,7 @@ check3.addEventListener('click', () => {
     Box3.classList.remove('bg-[#E8181B]'); 
     Check.classList.remove('bg-[#E8181B]'); 
     Box.classList.remove('bg-[#E8181B]'); 
-    document.getElementById('delivery-fee').textContent = "N3000"; updateOrderTotal(); 
+    document.getElementById('delivery-fee').textContent = "N4000"; updateOrderTotal(); 
 });
 Box3.addEventListener('click', () => { 
     Box3.classList.add('bg-[#E8181B]'); 

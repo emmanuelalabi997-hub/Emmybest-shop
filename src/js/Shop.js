@@ -35,6 +35,7 @@ Term.addEventListener('click', () => {
 });
 
 
+// --- Open Menu ---
 threedot.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
@@ -53,16 +54,25 @@ threedot.addEventListener("click", () => {
         // When menu is open, lock touch scrolling on iOS
         MainBody.style.touchAction = "none";
     } else {
-        // When menu is closed, bring scrolling back
+        // Fallback check: when menu is closed, bring scrolling back
         MainBody.style.touchAction = "auto";
     }
 });
 
+// --- Close Menu (Cancels what threedot does) ---
 ex.addEventListener("click", () => {
+    // 1. Put the sidebar back to its hidden position
     slide.classList.toggle("-translate-x-56");
+    
+    // 2. Remove the blur effects
     body.classList.toggle("blur-3xl");
     footer.classList.toggle("blur-3xl");
+    
+    // 3. Re-enable standard scrolling for Android/Desktop
     MainBody.classList.remove("overflow-y-hidden");
+    
+    // 4. FIX FOR iOS SAFARI: Explicitly bring scrolling back when closing
+    MainBody.style.touchAction = "auto";
 });
 
 Filter.addEventListener("click", () => {

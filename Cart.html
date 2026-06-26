@@ -3,19 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EmmyBest-Cart</title>
+    <meta
+      name="description"
+      content="Review your EmmyBest fragrance cart, choose delivery, and complete your order quickly."
+    />
+    <meta
+      name="keywords"
+      content="EmmyBest cart, fragrance cart, checkout, delivery options"
+    />
+    <meta name="author" content="EmmyBest" />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#0D1B3E" />
+    <meta property="og:title" content="Your Cart | EmmyBest" />
+    <meta
+      property="og:description"
+      content="Review your selected fragrances and complete your order securely."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="./Cart.html" />
+    <meta property="og:image" content="src/media/image/one.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Your Cart | EmmyBest</title>
+    <link rel="canonical" href="./Cart.html" />
     <link rel="stylesheet" href="src/css/output.css" />
     <link rel="stylesheet" href="fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script
       src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
       type="module"
     ></script>
   </head>
   <style>
-    *{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    * {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
     .sel {
       color: #4a4a4a;
@@ -37,9 +61,9 @@
       color: whitesmoke;
     }
   </style>
-  <body class="bg-[#F4F4F4]"  id="MainBody">
+  <body class="bg-[#F4F4F4]" id="MainBody">
     <!-- //sidebar -->
-     <section
+    <section
       class="h-full w-56 bg-[#000000cf] absolute z-99 flex flex-col justify-evenly items-center px-5 -translate-x-56 transition duration-300 blur-none"
       id="slide"
     >
@@ -69,7 +93,8 @@
           href="Cart.html"
           class="selx text-xl font-sans cursor-pointer flex items-center gap-2"
         >
-          <i class="fa-solid fa-cart-shopping w-8 text-[#E8181B]"></i><h1 class="text-[#E8181B]">Cart</h1>
+          <i class="fa-solid fa-cart-shopping w-8 text-[#E8181B]"></i>
+          <h1 class="text-[#E8181B]">Cart</h1>
         </a>
         <a
           href="Delivery.html"
@@ -87,29 +112,36 @@
 
       <div class="bg-gray-500 w-full h-[0.5px]"></div>
 
-               <div class="w-full h-32 flex flex-col justify-around">
-                <h3 class="text-[#F4F4F4] 
-                text-xl  font-sans cursor-pointer  ">Categories</h3>
-                <a href="Shop.html?category=men"><h3 class="selx
-                text-xl  font-sans cursor-pointer ">Men's</h3></a>
-                <a href="Shop.html?category=women">
-                <h3 class="selx
-                text-xl  font-sans cursor-pointer ">Women's</h3></a>
-                <a href="Shop.html?category=unisex">
-                <h3 class="selx
-                text-xl  font-sans cursor-pointer ">Unisex</h3></a>
-            </div>
-
+      <div class="w-full h-32 flex flex-col justify-around">
+        <h3 class="text-[#F4F4F4] text-xl font-sans cursor-pointer">
+          Categories
+        </h3>
+        <a href="Shop.html?category=men"
+          ><h3 class="selx text-xl font-sans cursor-pointer">Men's</h3></a
+        >
+        <a href="Shop.html?category=women">
+          <h3 class="selx text-xl font-sans cursor-pointer">Women's</h3></a
+        >
+        <a href="Shop.html?category=unisex">
+          <h3 class="selx text-xl font-sans cursor-pointer">Unisex</h3></a
+        >
+      </div>
 
       <div class="bg-gray-500 w-full h-[0.5px]"></div>
 
       <div class="w-full h-32 flex flex-col justify-around">
-        <h3 class=" text-xl font-sans cursor-pointer text-[#F4F4F4]">About Us</h3>
+        <h3 class="text-xl font-sans cursor-pointer text-[#F4F4F4]">
+          About Us
+        </h3>
         <a href="Delivery.html">
-        <h3 class="selx text-xl font-sans cursor-pointer">FAQs</h3>
+          <h3 class="selx text-xl font-sans cursor-pointer">FAQs</h3>
         </a>
-        <h3 class="selx text-xl font-sans cursor-pointer" id="terms">Terms & Conditions</h3>
-        <h3 class="selx text-xl font-sans cursor-pointer" id="policy">Privacy Policy</h3>
+        <h3 class="selx text-xl font-sans cursor-pointer" id="terms">
+          Terms & Conditions
+        </h3>
+        <h3 class="selx text-xl font-sans cursor-pointer" id="policy">
+          Privacy Policy
+        </h3>
       </div>
     </section>
 
@@ -137,6 +169,7 @@
       </header>
 
       <main class="flex flex-col">
+
         <!-- //cart section -->
         <div class="w-full h-10 flex items-center">
           <h1 class="text-2xl font-semibold">My cart <span>(0)</span></h1>
@@ -146,7 +179,11 @@
             class="w-full border border-gray-300 flex flex-row py-2 px-1 rounded-xl hover:border-[#000000cf] duration-300"
           >
             <div>
-              <img src="src/media/image/men.png" alt="" class="w-44 h-24" />
+              <img
+                src="src/media/image/men.png"
+                alt="EmmyBest fragrance product"
+                class="w-44 h-24"
+              />
             </div>
             <div class="w-full flex flex-col justify-evenly">
               <h1 class="font-semibold text-[18px]">unavailable</h1>
@@ -341,36 +378,53 @@
         </div>
       </main>
 
-  
-    <div class="w-full h-20 bg-[#F4F4F4] "></div>
-          </div>
-<!-- //bottom -->
-         <article class=" fixed bottom-0 w-full h-16 flex flex-col justify-between bg-[#F4F4F4] " id="footer">
-         <div class="bg-gray-400 w-full h-[0.5px]"></div>
-         <section class="flex flex-row w-full justify-around">
-            <a href="index.html" class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer ">
-                <i class="fa-solid fa-home text-xl"></i>
-                <h3 class="">Home</h3>
-            </a>
-             <a href="Shop.html" class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer ">
-                <i class="fa-solid fa-shop text-xl"></i>
-                <h3 class="">Shop</h3>
-            </a>
-             <a href="Cart.html" class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer ">
-                <i class="fa-solid fa-cart-shopping text-xl text-[#E8181B]"></i>
-                <h3 class="text-[#E8181B]">Cart</h3>
-            </a>
-             <a href="Delivery.html" class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer ">
-                <i class="fa-solid fa-location text-xl"></i>
-                <h3 class="">Delivery</h3>
-            </a>
-             <a href="Contact.html" class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer ">
-                <i class="fa-solid fa-phone text-xl"></i>
-                <h3 class="">Contact</h3>
-            </a>
-         </section>
+      <div class="w-full h-20 bg-[#F4F4F4]"></div>
+    </div>
+    <!-- //bottom -->
+    <article
+      class="fixed bottom-0 w-full h-16 flex flex-col justify-between bg-[#F4F4F4]"
+      id="footer"
+    >
+      <div class="bg-gray-400 w-full h-[0.5px]"></div>
+      <section class="flex flex-row w-full justify-around">
+        <a
+          href="index.html"
+          class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-home text-xl"></i>
+          <h3 class="">Home</h3>
+        </a>
+        <a
+          href="Shop.html"
+          class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-shop text-xl"></i>
+          <h3 class="">Shop</h3>
+        </a>
+        <a
+          href="Cart.html"
+          class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-cart-shopping text-xl text-[#E8181B]"></i>
+          <h3 class="text-[#E8181B]">Cart</h3>
+        </a>
+        <a
+          href="Delivery.html"
+          class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-location text-xl"></i>
+          <h3 class="">Delivery</h3>
+        </a>
+        <a
+          href="Contact.html"
+          class="sel flex flex-col h-14 text-center justify-evenly w-20 cursor-pointer"
+        >
+          <i class="fa-solid fa-phone text-xl"></i>
+          <h3 class="">Contact</h3>
+        </a>
+      </section>
     </article>
-    
+
     <script src="src/js/Cart.js"></script>
   </body>
 </html>
